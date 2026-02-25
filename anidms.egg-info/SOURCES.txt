@@ -1,0 +1,8 @@
+setup.py
+anidms/__init__.py
+anidms/core.py
+anidms.egg-info/PKG-INFO
+anidms.egg-info/SOURCES.txt
+anidms.egg-info/dependency_links.txt
+anidms.egg-info/requires.txt
+anidms.egg-info/top_level.txt
