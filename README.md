@@ -261,18 +261,6 @@ Practical effect:
 - `conda-recipe`:
   - Conda build recipe (`meta.yaml`) for packaging/release.
 
-## Conda packaging
-
-A starter recipe is included at:
-
-`conda-recipe/meta.yaml`
-
-Build and upload example:
-
-```bash
-conda build conda-recipe
-anaconda upload <path-to-built-package>
-```
 
 ## Troubleshooting
 
