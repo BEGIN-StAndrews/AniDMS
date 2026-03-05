@@ -5,7 +5,7 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "anidms"
 version = "1.1.0"
-description = "AniDMS: query monthly DMS data and annotate tracking records with LAEA-IDW"
+description = "AniDMS: query daily DMS data from monthly files and annotate tracking records with LAEA-IDW"
 readme = { file = "README.md", content-type = "text/markdown" }
 requires-python = ">=3.9"
 license = { text = "MIT" }

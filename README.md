@@ -37,16 +37,16 @@ If you found any high-lat DMS is missing, this might due to the missing data fro
 ### Recommended: create a clean conda environment
 
 ```bash
-conda create -n anidms-test python=3.10 -y
+conda create -n anidms-test python=3.11 -y
 conda activate anidms-test
 ```
 
-### Install from source (editable)
+### Install from source
 
-Download this repository and change directory to your folder:
+*Download this repository* and change directory to your folder:
 
 ```bash
-cd c:\...\your package folder
+cd c:\...\"your folder"
 ```
 
 ```bash
@@ -54,6 +54,20 @@ python -m pip install -e .
 ```
 
 Dependencies are installed automatically from `setup.py`.
+
+### Recommended: Install from Package Index/conda
+
+```bash
+pip install anidms
+```
+
+```bash
+conda install -c meixuanliu -y anidms
+```
+
+```bash
+conda install meixuanliu::anidms
+```
 
 ## Quick start & Download data
 
