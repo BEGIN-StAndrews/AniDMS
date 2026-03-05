@@ -1,16 +1,15 @@
 Metadata-Version: 2.4
 Name: anidms
 Version: 1.1.0
-Summary: AniDMS: query monthly DMS data and annotate tracking records with LAEA-IDW
+Summary: AniDMS: query daily DMS data from monthly files and annotate tracking records with LAEA-IDW
 Author-email: Meixuan Liu <ml340@st-andrews.ac.uk>
-License: MIT
+License-Expression: MIT
 Project-URL: Homepage, https://github.com/BEGIN-StAndrews/AniDMS
 Project-URL: Repository, https://github.com/BEGIN-StAndrews/AniDMS
 Project-URL: Issues, https://github.com/BEGIN-StAndrews/AniDMS/issues
 Keywords: dms,netcdf,trajectory,geospatial,zenodo
 Classifier: Development Status :: 4 - Beta
 Classifier: Intended Audience :: Science/Research
-Classifier: License :: OSI Approved :: MIT License
 Classifier: Programming Language :: Python :: 3
 Classifier: Programming Language :: Python :: 3.9
 Classifier: Programming Language :: Python :: 3.10
@@ -66,16 +65,16 @@ If you found any high-lat DMS is missing, this might due to the missing data fro
 ### Recommended: create a clean conda environment
 
 ```bash
-conda create -n anidms-test python=3.10 -y
+conda create -n anidms-test python=3.11 -y
 conda activate anidms-test
 ```
 
-### Install from source (editable)
+### Install from source
 
-Download this repository and change directory to your folder:
+*Download this repository* and change directory to your folder:
 
 ```bash
-cd c:\...\your package folder
+cd c:\...\"your folder"
 ```
 
 ```bash
@@ -83,6 +82,20 @@ python -m pip install -e .
 ```
 
 Dependencies are installed automatically from `setup.py`.
+
+### Recommended: Install from Package Index/conda
+
+```bash
+pip install anidms
+```
+
+```bash
+conda install -c meixuanliu -y anidms
+```
+
+```bash
+conda install meixuanliu::anidms
+```
 
 ## Quick start & Download data
 

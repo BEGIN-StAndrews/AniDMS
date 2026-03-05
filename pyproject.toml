@@ -8,7 +8,7 @@ version = "1.1.0"
 description = "AniDMS: query daily DMS data from monthly files and annotate tracking records with LAEA-IDW"
 readme = { file = "README.md", content-type = "text/markdown" }
 requires-python = ">=3.9"
-license = { text = "MIT" }
+license = "MIT"
 authors = [
   { name = "Meixuan Liu", email = "ml340@st-andrews.ac.uk" }
 ]
@@ -16,7 +16,6 @@ keywords = ["dms", "netcdf", "trajectory", "geospatial", "zenodo"]
 classifiers = [
   "Development Status :: 4 - Beta",
   "Intended Audience :: Science/Research",
-  "License :: OSI Approved :: MIT License",
   "Programming Language :: Python :: 3",
   "Programming Language :: Python :: 3.9",
   "Programming Language :: Python :: 3.10",
