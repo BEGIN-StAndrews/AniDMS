@@ -55,18 +55,22 @@ python -m pip install -e .
 
 Dependencies are installed automatically from `setup.py`.
 
-### Recommended: Install from Package Index/conda
+### Recommended: Install from Package Index/Anaconda/Conda forge
 
+From PyPI: 
 ```bash
 pip install anidms
 ```
-
+Or:  
+From conda-forge: 
+```bash
+conda install -c conda-forge anidms
+```
+From Anaconda: 
 ```bash
 conda install -c meixuanliu -y anidms
-```
 
-```bash
-conda install meixuanliu::anidms
+conda install meixuanliu::anidms # same
 ```
 
 ## Quick start & Download data
@@ -278,9 +282,10 @@ Practical effect:
 
 ## Troubleshooting
 
-### `ModuleNotFoundError: No module named anidms` in Jupyter
+### 1. `ModuleNotFoundError: No module named anidms` in Jupyter
 
-Usually kernel/env mismatch. Confirm notebook kernel uses the same env where you installed AniDMS:
+Usually kernel/env mismatch.  
+Confirm notebook kernel uses the same env where you installed AniDMS:
 
 ```python
 import sys
@@ -293,7 +298,27 @@ Then reinstall in that env:
 python -m pip install -e .
 ```
 
-### Zenodo query returns missing month files
+### 2. `The environment is inconsistent, please check the package plan carefully` when installing via conda-forge
+
+Please check the error message. If the packages that causing inconsistency include:  
+```anaconda-*```  
+That is because your environment has already mixed with ```_anaconda_depends```. This locks the solver. 
+
+Check with: ```conda config --show create_default_packages```  
+If there is any defaut packages: `conda config --remove-key create_default_packages`  
+
+Or you can create the environment with:  
+``` bash 
+conda create -n anidms-test -y --override-channels -c conda-forge --no-default-packages python=3.11 anidms
+```
+
+Check after activating the environment: 
+``` bash
+python -c "from anidms import AniDMS; print(AniDMS)"
+```  
+If this still can't fix, please try alternative sources. 
+
+### 3. Zenodo query returns missing month files
 
 - Check network/proxy access.
 - Keep default DOI unless you are testing another record:
